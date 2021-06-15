@@ -1,0 +1,108 @@
+<html>
+	<head>
+		<title>Local Service</title>
+		<style type="text/css">
+			.form{
+			
+			font-size: 25px
+		}
+
+		input[type=text]{
+			width: 50%;
+			padding: 12px 20px;
+			margin: 8px 0;
+			display: inline-block;
+			border: 1px solid #ccc;
+		}
+		select{
+			width: 50%;
+			padding: 12px 20px;
+			margin: 8px 0;
+			display: inline-block;
+			border: 1px solid #ccc;
+		}
+		input[type=date]{
+			width: 50%;
+			padding: 12px 20px;
+			margin: 8px 0;
+			display: inline-block;
+			border: 1px solid #ccc;
+		}
+		input[type=time]{
+			width: 50%;
+			padding: 12px 20px;
+			margin: 8px 0;
+			display: inline-block;
+			border: 1px solid #ccc;
+		}
+		input[type=number]{
+			width: 50%;
+			padding: 12px 20px;
+			margin: 8px 0;
+			display: inline-block;
+			border: 1px solid #ccc;
+		}
+		*{
+			margin: 0px;
+			padding: 0px;
+		}
+		body{
+			text-align: left;
+		background-color: #FBCE87;
+		margin-left: 30px;
+		margin-top: 30px;
+		margin-bottom: 30px;
+		}
+		header{
+		font-size: 25px; 
+		font-family: all;
+		}
+		input[type=submit]{
+		
+		font-size: 20px;
+		width: 50%;
+		padding: 12px 20px;
+		margin: 8px 0;
+		display: inline-block;
+		border: 1px solid #ccc;
+		}
+		input[type=submit]:hover{
+		background-color: grey;
+		}
+		h1{
+			padding-top: 10px;
+		}
+		</style>
+	</head> 
+	<body >  
+		<form action="http://127.0.0.1:3000/process_post" method="POST" class="form">
+			<h1>Request Repair Service</h1><br>
+
+			Service type: <br><input type="text" name="service"> <br>
+			Service Center Address: <br><input type="text" name="center"><br>
+			Customer Name: <br><input type="text" name="customer_name"> <br>
+			Mobile:<br><input type="text" name="mobile">  <br>
+			Email address: <br><input type="text" name="email"> <br>
+			Enter Address:<br><input type="text" name="address"><br>
+			Enter City: <br><input type="text" name="city"> <br>
+			Pin Code :  <br><input type="number" name="pincode"><br>
+			Preferred Date: <br><input type="date" id="start" name="pdate" max="2021-12-31"><br>
+			<!--Preferred Time Slot: <br><input type="time" name="time" value="Select Option"><br>-->
+			<label>Preferred Time Slot:</label><br>
+			<select required name="time">
+				<option value="-Select Option-">- Select Option -</option>
+				<option value="10.00 AM - 12.00 PM" >10.00 AM - 12.00 PM</option>
+				<option value="2.00 PM - 4.00 PM" >2.00 PM - 4.00 PM</option>
+				<option value="4.00 PM - 6.00 PM" >4.00 PM - 6.00 PM</option>
+				<option value="6.00 PM - 8.00 PM" >6.00 PM - 8.00 PM</option>
+			</select><br>
+			Fault Description: <br><input type="text" name="fault"><br>
+			<h6>(Min: 10, Max: 500)</h6>
+ 			<br>
+ 			<input type="submit" value="Request Service">
+			 
+		</form>  
+		<h3> For Any query:</h3>
+		<a href="contact.html">Contact Us</a>
+	</body>  
+</html>
